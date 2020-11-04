@@ -1,0 +1,26 @@
+---
+global:
+  type: number
+  category: typography
+
+props:
+  - name: font-weight-light
+    value: 400
+    category: font-weight
+
+  - name: font-weight-regular
+    value: 500
+    category: font-weight
+
+  - name: font-weight-medium
+    value: 600
+    category: font-weight
+
+  - name: font-weight-bold
+    value: 700
+    category: font-weight
+
+  # if we need use
+  # - name: font-weight-extrabold
+  #   value: 900
+  #   category: font-weight

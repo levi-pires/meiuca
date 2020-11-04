@@ -1,0 +1,25 @@
+---
+global:
+  type: size
+  category: border
+
+props:
+  - name: border-width-none
+    value: "0px"
+    category: border-width
+
+  - name: border-width-hairline
+    value: '1px'
+    category: border-width
+
+  - name: border-width-thin
+    value: '2px'
+    category: border-width
+
+  - name: border-width-thick
+    value: '4px'
+    category: border-width
+
+  - name: border-width-heavy
+    value: '8px'
+    category: border-width

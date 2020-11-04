@@ -1,0 +1,11 @@
+---
+global:
+  type: size
+  category: border
+
+props:
+  - name: border-style-default
+    value: solid
+    meta:
+      friendlyName: Border Style Default
+    category: border-style
