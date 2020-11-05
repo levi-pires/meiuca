@@ -5,14 +5,18 @@ import {
 import { createAppContainer } from "react-navigation";
 
 import Challenge from "./pages/challenge";
-import CodePage from "./pages/code";
+import Web from "./pages/web";
+import GNewsLanding from "./pages/g-news-page-landing";
+import GNews from "./pages/g-news-main";
 
 import { colorNeutral03 } from "./tokens";
 
 const Stack = createStackNavigator(
   {
     Challenge,
-    CodePage,
+    Web,
+    GNewsLanding,
+    GNews,
   },
   {
     headerMode: "float",

@@ -42,7 +42,7 @@ export default StyleSheet.create({
   },
 
   button: {
-    alignSelf: "flex-start",
+    alignItems: "center",
     borderRadius: StyleTokens.borderRadiusNone,
     paddingVertical: StyleTokens.spacingSquishXs[0],
     paddingHorizontal: StyleTokens.spacingSquishXs[1],

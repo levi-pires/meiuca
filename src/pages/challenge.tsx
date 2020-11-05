@@ -2,7 +2,7 @@ import React from "react";
 import { Text, View, TouchableOpacity } from "react-native";
 import { StackNavigationProp } from "react-navigation-stack/lib/typescript/src/vendor/types";
 
-import styles from "../styles/challenge-page";
+import styles from "../styles/global";
 
 const Challenge = (props: { navigation: StackNavigationProp }) => {
   return (
@@ -17,13 +17,17 @@ const Challenge = (props: { navigation: StackNavigationProp }) => {
       </Text>
       <TouchableOpacity
         style={styles.button}
-        onPress={() => props.navigation.navigate("CodePage")}
+        onPress={() =>
+          props.navigation.navigate("Web", {
+            url: "https://github.com/levi-pires/meiuca/",
+          })
+        }
       >
         <Text style={styles.buttonText}>See Code</Text>
       </TouchableOpacity>
       <TouchableOpacity
         style={styles.button}
-        onPress={() => props.navigation.navigate("GNews")}
+        onPress={() => props.navigation.navigate("GNewsLanding")}
       >
         <Text style={styles.buttonText}>See Google News</Text>
       </TouchableOpacity>
