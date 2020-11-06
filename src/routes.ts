@@ -9,9 +9,8 @@ import Web from "./pages/web";
 import GNewsLanding from "./pages/g-news-page-landing";
 import GNews from "./pages/g-news-main";
 
-import { colorNeutral03 } from "./tokens";
 import { renderNativeFont } from "./fonts";
-import { fontFamilyBase, fontWeightRegular } from "./tokens";
+import { fontFamilyBase, fontWeightRegular, colorNeutral03 } from "./tokens";
 
 const routeMap = {
   Challenge,
