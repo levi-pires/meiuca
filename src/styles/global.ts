@@ -1,5 +1,6 @@
 import { StyleSheet } from "react-native";
 import * as StyleTokens from "../tokens";
+import { renderNativeFont } from "../fonts";
 
 export default StyleSheet.create({
   /**
@@ -17,8 +18,10 @@ export default StyleSheet.create({
   header: {
     fontSize: StyleTokens.fontSizeLg,
     // lineHeight: StyleTokens.lineHeightDistant,
-    fontFamily: StyleTokens.fontFamilyBase,
-    fontWeight: StyleTokens.fontWeightBold,
+    fontFamily: renderNativeFont({
+      fontFamily: StyleTokens.fontFamilyBase,
+      fontWeight: StyleTokens.fontWeightBold,
+    }),
     color: StyleTokens.colorNeutral01,
     marginBottom: StyleTokens.spacingStackXxxs,
   },
@@ -26,8 +29,10 @@ export default StyleSheet.create({
   subtitle: {
     fontSize: StyleTokens.fontSizeMd,
     // lineHeight: StyleTokens.lineHeightMedium,
-    fontFamily: StyleTokens.fontFamilyBase,
-    fontWeight: StyleTokens.fontWeightMedium,
+    fontFamily: renderNativeFont({
+      fontFamily: StyleTokens.fontFamilyBase,
+      fontWeight: StyleTokens.fontWeightSemiBold,
+    }),
     color: StyleTokens.colorNeutral02,
     marginBottom: StyleTokens.spacingStackXxs,
   },
@@ -35,8 +40,10 @@ export default StyleSheet.create({
   paragraph: {
     fontSize: StyleTokens.fontSizeXs,
     //   lineHeight: StyleTokens.lineHeightDistant,
-    fontFamily: StyleTokens.fontFamilyBase,
-    fontWeight: StyleTokens.fontWeightRegular,
+    fontFamily: renderNativeFont({
+      fontFamily: StyleTokens.fontFamilyBase,
+      fontWeight: StyleTokens.fontWeightMedium,
+    }),
     color: StyleTokens.colorNeutral02,
     marginBottom: StyleTokens.spacingStackSm,
   },
@@ -53,8 +60,10 @@ export default StyleSheet.create({
   buttonText: {
     fontSize: StyleTokens.fontSizeSm,
     //   lineHeight: StyleTokens.lineHeightTight,
-    fontFamily: StyleTokens.fontFamilyBase,
-    fontWeight: StyleTokens.fontWeightMedium,
+    fontFamily: renderNativeFont({
+      fontFamily: StyleTokens.fontFamilyBase,
+      fontWeight: StyleTokens.fontWeightSemiBold,
+    }),
     color: StyleTokens.colorNeutral05,
   },
 });

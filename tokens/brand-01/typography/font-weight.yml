@@ -4,15 +4,15 @@ global:
   category: typography
 
 props:
-  - name: font-weight-light
+  - name: font-weight-regular
     value: 400
     category: font-weight
 
-  - name: font-weight-regular
+  - name: font-weight-medium
     value: 500
     category: font-weight
 
-  - name: font-weight-medium
+  - name: font-weight-semi-bold
     value: 600
     category: font-weight
 

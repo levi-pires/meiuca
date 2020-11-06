@@ -10,28 +10,35 @@ import GNewsLanding from "./pages/g-news-page-landing";
 import GNews from "./pages/g-news-main";
 
 import { colorNeutral03 } from "./tokens";
+import { renderNativeFont } from "./fonts";
+import { fontFamilyBase, fontWeightRegular } from "./tokens";
 
-const Stack = createStackNavigator(
-  {
-    Challenge,
-    Web,
-    GNewsLanding,
-    GNews,
-  },
-  {
-    headerMode: "float",
-    mode: "modal",
-    defaultNavigationOptions: {
-      gestureEnabled: true,
-      gestureDirection: "horizontal",
-      gestureResponseDistance: { horizontal: 100 },
-      headerTitleAlign: "center",
-      cardStyleInterpolator: CardStyleInterpolators.forHorizontalIOS,
-      headerStyle: {
-        backgroundColor: colorNeutral03,
-      },
+const routeMap = {
+  Challenge,
+  Web,
+  GNewsLanding,
+  GNews,
+};
+
+const Stack = createStackNavigator(routeMap, {
+  headerMode: "float",
+  mode: "modal",
+  defaultNavigationOptions: {
+    gestureEnabled: true,
+    gestureDirection: "horizontal",
+    gestureResponseDistance: { horizontal: 100 },
+    headerTitleAlign: "center",
+    headerTitleStyle: {
+      fontFamily: renderNativeFont({
+        fontFamily: fontFamilyBase,
+        fontWeight: fontWeightRegular,
+      }),
     },
-  }
-);
+    cardStyleInterpolator: CardStyleInterpolators.forHorizontalIOS,
+    headerStyle: {
+      backgroundColor: colorNeutral03,
+    },
+  },
+});
 
 export default createAppContainer(Stack);

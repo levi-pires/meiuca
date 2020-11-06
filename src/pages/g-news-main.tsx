@@ -8,6 +8,12 @@ import axios from "axios";
 
 import styles from "../styles/g-news-page-main";
 
+type News = {
+  status: string;
+  totalResults: number;
+  articles: { title: string; url: string; urlToImage: string | null }[];
+};
+
 export default class GNews extends Component<{
   navigation: StackNavigationProp<
     NavigationRoute<{}>,
@@ -22,7 +28,21 @@ export default class GNews extends Component<{
     jsx: <View />,
   };
 
+  safeImageRender = (urlToImage: string | null) => {
+    if (urlToImage !== null && urlToImage.includes("https://")) {
+      return (
+        <View style={styles.imageContainer}>
+          <Image source={{ uri: urlToImage }} style={styles.image} />
+        </View>
+      );
+    }
+
+    return null;
+  };
+
   async componentDidMount() {
+    let jsx = null;
+
     try {
       const news = (
         await axios.get(
@@ -30,41 +50,29 @@ export default class GNews extends Component<{
             this.props.navigation.state.params!.selectedCountry
           }&apiKey=889fb23a624b4fa7a0ee2eb46c8f6c23`
         )
-      ).data as {
-        status: string;
-        totalResults: number;
-        articles: { title: string; url: string; urlToImage: string | null }[];
-      };
+      ).data as News;
 
       if (news.status === "ok") {
-        this.setState({
-          jsx: news.articles.map((item, index) => (
-            <View key={index} style={styles.cardContainer}>
-              <Text style={styles.title}>{item.title}</Text>
-              {item.urlToImage !== null &&
-              item.urlToImage.includes("https://") ? (
-                <View style={styles.imageContainer}>
-                  <Image
-                    source={{ uri: item.urlToImage }}
-                    style={styles.image}
-                  />
-                </View>
-              ) : null}
-              <TouchableOpacity
-                style={styles.button}
-                onPress={() => this.props.navigation.navigate("Web", item)}
-              >
-                <Text style={styles.buttonText}>Veja mais</Text>
-              </TouchableOpacity>
-            </View>
-          )),
-        });
+        jsx = news.articles.map((item, index) => (
+          <View key={index} style={styles.cardContainer}>
+            <Text style={styles.title}>{item.title}</Text>
+            {this.safeImageRender(item.urlToImage)}
+            <TouchableOpacity
+              style={styles.button}
+              onPress={() => this.props.navigation.navigate("Web", item)}
+            >
+              <Text style={styles.buttonText}>Veja mais</Text>
+            </TouchableOpacity>
+          </View>
+        ));
       } else {
-        this.setState({ jsx: <Text>Error</Text> });
+        jsx = <Text>Error</Text>;
       }
     } catch (err) {
-      this.setState({ jsx: <Text>{err.toString()}</Text> });
+      jsx = <Text>{err.toString()}</Text>;
     }
+
+    this.setState({ jsx });
   }
 
   render() {

@@ -1,0 +1,5 @@
+imports:
+  - ./archivo.yml
+
+global:
+  category: tokens

@@ -1,0 +1,37 @@
+---
+global:
+  type: object
+  category: typography
+
+props:
+  - name: archivo-regular
+    value:
+      src: "https://fonts.gstatic.com/s/archivo/v7/k3kQo8UDI-1M0wlSTd4.ttf"
+      local: "Archivo-Regular"
+      format: ttf
+    type: object
+    category: font
+
+  - name: archivo-medium
+    value:
+      src: "https://fonts.gstatic.com/s/archivo/v7/k3kVo8UDI-1M0wlSdSrLC0E.ttf"
+      local: "Archivo-Medium"
+      format: ttf
+    type: object
+    category: font
+
+  - name: archivo-semi-bold
+    value:
+      src: "https://fonts.gstatic.com/s/archivo/v7/k3kVo8UDI-1M0wlSdQbMC0E.ttf"
+      local: "Archivo-SemiBold"
+      format: ttf
+    type: object
+    category: font
+
+  - name: archivo-bold
+    value:
+      src: "https://fonts.gstatic.com/s/archivo/v7/k3kVo8UDI-1M0wlSdWLNC0E.ttf"
+      local: "Archivo-Bold"
+      format: ttf
+    type: object
+    category: font

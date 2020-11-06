@@ -1,4 +1,5 @@
 import { StyleSheet } from "react-native";
+import { renderNativeFont } from "../fonts";
 import * as StyleTokens from "../tokens";
 
 export default StyleSheet.create({
@@ -10,7 +11,10 @@ export default StyleSheet.create({
   },
 
   label: {
-    fontFamily: StyleTokens.fontFamilyBase,
+    fontFamily: renderNativeFont({
+      fontFamily: StyleTokens.fontFamilyBase,
+      fontWeight: StyleTokens.fontWeightRegular,
+    }),
     fontSize: StyleTokens.fontSizeXs,
     marginBottom: StyleTokens.spacingStackNano,
   },

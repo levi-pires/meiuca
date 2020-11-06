@@ -56,13 +56,9 @@
 	<key>UIAppFonts</key>
 	<array>
 		<string>Archivo-Bold.ttf</string>
-		<string>Archivo-BoldItalic.ttf</string>
-		<string>Archivo-Italic.ttf</string>
 		<string>Archivo-Medium.ttf</string>
-		<string>Archivo-MediumItalic.ttf</string>
 		<string>Archivo-Regular.ttf</string>
 		<string>Archivo-SemiBold.ttf</string>
-		<string>Archivo-SemiBoldItalic.ttf</string>
 	</array>
 </dict>
 </plist>
