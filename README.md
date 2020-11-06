@@ -8,6 +8,6 @@ Pode ser criado, ainda, uma ferramenta para transformar os links de importação
 
 O APK pode ser acessado na [release page](https://github.com/levi-pires/meiuca/releases/tag/android-v1.1)
 
-![cli demo](https://raw.githubusercontent.com/levi-pires/main/demo/cli.gif)
+![cli demo](https://raw.githubusercontent.com/levi-pires/meiuca/main/demo/cli.gif)
 
-![app demo](https://raw.githubusercontent.com/levi-pires/main/demo/app.gif)
+![app demo](https://raw.githubusercontent.com/levi-pires/meiuca/main/demo/app.gif)
