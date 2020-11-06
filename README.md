@@ -6,7 +6,7 @@ Os Style Tokens foram entregues em arquivos '.yml' com o padrão [Theo](https://
 
 Pode ser criado, ainda, uma ferramenta para transformar os links de importação de fontes (`https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,400;1,600&display=swap`) em Font Render Metadata.
 
-O APK pode ser acessado na [release](https://github.com/levi-pires/meiuca/releases/tag/android-v1.1)
+O APK pode ser acessado na [release page](https://github.com/levi-pires/meiuca/releases/tag/android-v1.1)
 
 ![cli demo](https://raw.githubusercontent.com/levi-pires/main/demo/cli.gif)
 
